@@ -60,7 +60,7 @@ public class SimpleStudentInfoApp extends JFrame implements ActionListener {
 
     public SimpleStudentInfoApp() {
         setTitle("Student Information");
-        setSize(400, 400);
+        setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         studentList = new ArrayList<>();
