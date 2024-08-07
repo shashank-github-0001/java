@@ -34,6 +34,13 @@ public class MissedCallsManager {
      * else we can also display the details
      */
 
+    /*
+     * actually the thing is that we should
+     * be able to delete it at start when displaying
+     * also be able to delete it at end based on number
+     * so give a choice to display the next delete the current
+     */
+
     while (it.hasNext()) {
       MissedCalls obj = it.next();
       System.out.println("you have missed call from" + obj.ph);

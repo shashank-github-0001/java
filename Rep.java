@@ -1,5 +1,4 @@
 import java.awt.*;
-import java.awt.event.*;
 import java.sql.*;
 import javax.swing.*;
 
@@ -13,13 +12,15 @@ public class Rep extends JFrame {
   Rep() {
     // things
     setTitle("rep dbms");
-    setSize(400, 300);
+    setSize(300, 400);
     Font font = new Font("Serif", Font.PLAIN, 30);
     setLayout(new GridLayout(7, 2));
     setDefaultCloseOperation(EXIT_ON_CLOSE);
 
     // labels and input fields
-    add(new JLabel("reono"));
+    JLabel l1 = new JLabel("repno");
+    l1.setFont(font);
+    add(l1);
     repno = new JTextField();
     repno.setFont(font);
     add(repno);
@@ -45,15 +46,16 @@ public class Rep extends JFrame {
     add(rate);
 
     area = new JTextArea();
+    area.setFont(font);
     area.setEditable(false);
-
-    add(area);
 
     insert = new JButton("insert");
     show = new JButton("show");
 
     add(insert);
     add(show);
+
+    add(area);
 
     insert.addActionListener(e -> insert());
     show.addActionListener(e -> display());

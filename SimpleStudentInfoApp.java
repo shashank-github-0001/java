@@ -42,7 +42,7 @@ public class SimpleStudentInfoApp extends JFrame implements ActionListener {
     setTitle("Student Information");
     setSize(400, 300);
     setLayout(new GridLayout(3, 2));
-    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
 
     studentList = new ArrayList<>();
 
@@ -91,6 +91,10 @@ public class SimpleStudentInfoApp extends JFrame implements ActionListener {
     buttonPanel.add(computeButton);
     buttonPanel.add(doneButton);
     buttonPanel.add(displayButton);
+
+    add(inputPanel);
+    add(buttonPanel);
+    add(textArea);
   }
 
   @Override
