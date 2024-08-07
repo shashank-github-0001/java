@@ -1,4 +1,4 @@
-public class test {
+public class oneA {
   public static void main(String[] args) {
     String mainString = args[0];
     String subString = args[1];

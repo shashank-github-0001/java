@@ -1,5 +1,3 @@
-package jdbc1.src;
-
 import java.awt.*;
 import java.awt.event.*;
 import java.sql.*;
@@ -46,7 +44,8 @@ public class Main extends JFrame {
     add(display);
 
     try {
-      conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/test");
+      conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/test",
+                                         "root", "passoword");
     } catch (SQLException e) {
       e.printStackTrace();
     }

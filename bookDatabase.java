@@ -16,9 +16,16 @@ public class bookDatabase {
     Collections.sort(bl);
     Scanner s = new Scanner(System.in);
     ArrayList<Book> nbl = new ArrayList<>(bl);
+    for (Book o : nbl) {
+      System.out.println("title: " + o.title);
+      System.out.println("author: " + o.author);
+      System.out.println("publisher: " + o.publisher);
+      System.out.println("price: " + o.price);
+    }
     System.out.print("give the author name: ");
     String auth = s.nextLine().trim();
     printAuthor(auth);
+    s.close();
   }
 
   public static void addBook(String title, String author, String publisher,
@@ -28,13 +35,18 @@ public class bookDatabase {
   }
 
   public static void printAuthor(String author) {
+    boolean found = false;
     for (Book o : bl) {
       if (o.author.equals(author)) {
+        found = true;
         System.out.println("title: " + o.title);
         System.out.println("author: " + o.author);
         System.out.println("publisher: " + o.publisher);
         System.out.println("price: " + o.price);
       }
+    }
+    if (!found) {
+      System.out.println("author not found");
     }
   }
 }
